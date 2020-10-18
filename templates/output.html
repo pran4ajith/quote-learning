@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+
+    <div class="container-fluid">
+
+        <div class="container-image center-block">
+            <div class="polaroid">
+                <!-- <img src="img_5terre.jpg" alt="5 Terre" style="width:100%"> -->
+                <!-- <img src="{{image_path}}" alt="Uploaded Image" style="border: 1px solid #ddd;border-radius: 4px;padding: 5px;width: 150px;"> -->
+                <img src="{{image_path}}" alt="Uploaded Image" style="width:100%">
+
+            </div>
+
+            <!-- <div class="col-md-7">
+                <h3>Image Labels:</h3>
+                <p>{{pred_list}}</p>
+                
+            </div> -->
+        </div>
+    </div>
+          
+    
+        <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Quotes</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for pred in pred_list %}
+                    <tr>
+                        <!-- <th scope="row">1</th>  -->
+                        <td style="word-break:break-all;">{{pred}}</td>
+                      </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+
+        
+        
+            
+
+
+
+{% endblock %}

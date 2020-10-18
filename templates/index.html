@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+        <head>
+            {{ dropzone.load_css() }}
+            {{ dropzone.style('border: 4px dashed #0087F7; margin: 10%; min-height: 100px;') }}
+        </head>
+        <body>
+            {{ dropzone.create(action='index') }}
+            {{ dropzone.load_js() }}
+            {{ dropzone.config() }}
+
+            <!-- <a href="{{ url_for('quote_output') }}">Click here when you have finished uploading</a> -->
+            
+            <!-- <input type="submit" id="submit" value="Submit and Upload"> -->
+        </body>
+        <!--<script>
+            
+            
+            $(function() {
+              var myDropzone = new Dropzone("#my-dropzone");
+              myDropzone.on("queuecomplete", function(file) {
+                // Called when all files in the queue finish uploading.
+                window.location = "{{ url_for('quote_output') }}";
+              });
+            })
+            </script>-->
+
+        
+
+{% endblock %}
