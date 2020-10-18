@@ -11,22 +11,7 @@
             {{ dropzone.load_js() }}
             {{ dropzone.config() }}
 
-            <!-- <a href="{{ url_for('quote_output') }}">Click here when you have finished uploading</a> -->
-            
-            <!-- <input type="submit" id="submit" value="Submit and Upload"> -->
         </body>
-        <!--<script>
-            
-            
-            $(function() {
-              var myDropzone = new Dropzone("#my-dropzone");
-              myDropzone.on("queuecomplete", function(file) {
-                // Called when all files in the queue finish uploading.
-                window.location = "{{ url_for('quote_output') }}";
-              });
-            })
-            </script>-->
-
         
 
 {% endblock %}
